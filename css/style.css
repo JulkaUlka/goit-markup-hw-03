@@ -4,17 +4,49 @@
   --second-color: #757575;
   --bg-color: #2f303a;
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
   color: var(--main-color);
+  margin: 0;
 }
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
 }
+h1,h2,h3,p,ul{
+  margin-top: 0;
+  padding-left: 0;
+}
+.container {
+ 
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* background-color: green;   */
+}
+nav{
+  display: flex;
+  align-items: center;
+}
+.logo{
+margin-right: 93px;
+}
+
 .logo,
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -27,8 +59,25 @@ a {
 .accent {
   color: var(--brand-color);
 }
+
+.nav-link, .adress-nav {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav-link .item:not(:last-child),
+.adress-nav .item:not(:last-child){
+  margin-right: 50px;
+  display: block;
+}
+.adress-nav {
+  margin-left: auto;
+}
 .nav-link a,
-.adress-link a {
+.adress-nav a {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -37,8 +86,8 @@ a {
 }
 .nav-link a:hover,
 .nav-link a:focus,
-.adress-link a:hover,
-.adress-link a:focus,
+.adress-nav a:hover,
+.adress-nav a:focus,
 .footer-adress a:hover,
 .footer-contact a:hover,
 .footer-adress a:focus,
@@ -48,22 +97,31 @@ a {
 .current a {
   color: var(--brand-color);
 }
-.adress-link a {
+.adress-nav a {
   color: var(--second-color);
 }
 .hero {
   background-color: var(--bg-color);
+  text-align: center;
+  padding: 204px 452px 200px;
+
 }
 .main-title {
+  
+margin-bottom: 26px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+  
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 .btn {
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -145,9 +203,19 @@ a {
 }
 .footer {
   background-color: var(--bg-color);
+ padding-top: 60px;
+ padding-bottom: 60px;
+}
+.adress{
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.adress li:not(:last-child){
+ padding-bottom: 9px;
 }
 .footer-logo {
   color: #ffffff;
+  
 }
 .footer-adress a,
 .footer-contact a {
@@ -156,6 +224,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  
 }
 .footer-contact a {
   color: rgba(255, 255, 255, 0.6);
